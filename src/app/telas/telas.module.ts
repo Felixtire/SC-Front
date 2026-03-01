@@ -1,19 +1,44 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TelaInicialComponent} from './tela-inicial/tela-inicial.component';
 import {TelaCadastroProdutoComponent} from './tela-cadastro-produto/tela-cadastro-produto.component';
 import {TelaCadastroPedidoComponent} from './tela-cadastro-pedido/tela-cadastro-pedido.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {RouterModule} from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {FormsModule} from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    TelaInicialComponent,
     TelaCadastroProdutoComponent,
     TelaCadastroPedidoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+
+
+    MatCardModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatSortModule,
+    FormsModule
+
   ]
 })
 export class TelasModule { }

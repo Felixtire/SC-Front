@@ -1,0 +1,128 @@
+.main {
+  padding: 20px;
+}
+
+/* ========================= */
+/* BARRA SUPERIOR */
+/* ========================= */
+
+.initial-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form mat-form-field {
+  width: 250px;
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.informations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+
+
+
+
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  width: 320px;
+  height: 110px;
+  padding: 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover profissional */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* Ícones */
+.card img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Texto */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.info p {
+  margin: 5px 0 0 0;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Cores individuais */
+.total-produtos {
+  background-color: rgba(10, 158, 250, 0.20);
+}
+
+.em-estoque {
+  background-color: rgba(11, 215, 37, 0.20);
+}
+
+.baixo-estoque {
+  background-color: rgba(255, 165, 0, 0.20);
+}
+
+.status-produtos {
+  background-color: rgba(255, 215, 0, 0.30);
+}
+.table-content{
+  margin-top: 20px;
+  border: 4px solid rgb(229, 7, 7);
+}
+
+.full-width-table {
+
+  width: 100%;
+}
+
+table {
+  border: 3px solid rgba(33, 32, 32, 0.8);
+  width: 100%;
+  margin-top: 20px;
+}
+th{
+  width: 90px;
+}
+

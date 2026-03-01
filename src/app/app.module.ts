@@ -4,21 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TelaInicialComponent } from './telas/tela-inicial/tela-inicial.component';
-import { TelaCadastroProdutoComponent } from './telas/tela-cadastro-produto/tela-cadastro-produto.component';
-import { TelaCadastroPedidoComponent } from './telas/tela-cadastro-pedido/tela-cadastro-pedido.component';
+import {TelasModule} from './telas/telas.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TelaInicialComponent,
-    TelaCadastroProdutoComponent,
-    TelaCadastroPedidoComponent
+    AppComponent
   ],
   imports: [
+    TelasModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
