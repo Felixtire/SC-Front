@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {TelaCadastroProdutoComponent} from './telas/tela-cadastro-produto/tela-cadastro-produto.component';
 import {TelaCadastroPedidoComponent} from './telas/tela-cadastro-pedido/tela-cadastro-pedido.component';
+import {ModalAdicionarProdutoComponent} from './telas/modal-adicionar-produto/modal-adicionar-produto.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'pedidos',
     component: TelaCadastroPedidoComponent
+  },
+  {
+    path: 'cadastro',
+    component: ModalAdicionarProdutoComponent
   }
 ];
 

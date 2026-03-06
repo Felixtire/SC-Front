@@ -21,14 +21,17 @@
   align-items: center;
   gap: 15px;
 }
+.limpar-nome{
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+  margin-top: -30px;
+  color: #555555;
+}
 
 .form mat-form-field {
   width: 250px;
 }
-
-/* ========================= */
-/* CARDS */
-/* ========================= */
 
 .informations {
   display: flex;
@@ -36,10 +39,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-
-
-
-
 
 }
 

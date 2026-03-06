@@ -1,0 +1,39 @@
+<div class="form-container">
+
+  <mat-card class="form-card">
+    <h2 class="titulo">Cadastro de Produto</h2>
+
+    <form class="form-produto">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome do Produto</mat-label>
+        <input matInput placeholder="Digite o nome do produto">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Preço</mat-label>
+        <input matInput type="number" placeholder="Digite o preço">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Estoque</mat-label>
+        <input matInput type="number" placeholder="Quantidade em estoque">
+      </mat-form-field>
+
+      <div class="radio-container">
+        <mat-label class="radio-title">Status do Produto</mat-label>
+
+        <mat-radio-group class="radio-group">
+          <mat-radio-button value="ativo">Ativo</mat-radio-button>
+          <mat-radio-button value="inativo">Inativo</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <button mat-raised-button color="primary" class="botao">
+        Salvar Produto
+      </button>
+
+    </form>
+  </mat-card>
+
+</div>

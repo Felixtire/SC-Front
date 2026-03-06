@@ -14,13 +14,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {FormsModule} from '@angular/forms';
+import { ModalAdicionarProdutoComponent } from './modal-adicionar-produto/modal-adicionar-produto.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 
 @NgModule({
   declarations: [
     TelaCadastroProdutoComponent,
-    TelaCadastroPedidoComponent
+    TelaCadastroPedidoComponent,
+    ModalAdicionarProdutoComponent
   ],
   imports: [
     CommonModule,
@@ -37,8 +42,9 @@ import {FormsModule} from '@angular/forms';
     MatFormFieldModule,
     MatPaginatorModule,
     MatSortModule,
-    FormsModule
-
+    FormsModule,
+    MatDialogModule,
+    MatRadioModule
   ]
 })
 export class TelasModule { }

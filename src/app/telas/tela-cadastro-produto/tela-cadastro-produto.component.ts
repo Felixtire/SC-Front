@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {ServiceService} from '../../Service/service.service';
 import {Filtro, ListaDeProdutos, Page, Produto, ProdutoResposnse} from '../Models/entities.model';
+import {MatDialog} from '@angular/material/dialog';
+import {ModalAdicionarProdutoComponent} from '../modal-adicionar-produto/modal-adicionar-produto.component';
 
 
 @Component({
@@ -21,7 +23,7 @@ export class TelaCadastroProdutoComponent implements OnInit {
   baixoEstoque: number;
    nome: string;
 
-  constructor(private service: ServiceService) { }
+  constructor(private service: ServiceService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.listarProdutos();
@@ -56,9 +58,10 @@ export class TelaCadastroProdutoComponent implements OnInit {
     listarPorNome() {
     console.log(this.nome);
 
-    if (!this.nome || this.nome === '') {
-      alert('Campo de pesquisa está vazio');
+    if (this.nome === '' || !this.nome) {
+      this.listarProdutos();
     }
+
     this.service.listarProdutosPorNome(this.nome)
       .subscribe({
         next: (next: ProdutoResposnse) => {
@@ -69,6 +72,17 @@ export class TelaCadastroProdutoComponent implements OnInit {
           console.log('Erro', err);
         }
       });
+    }
+    limparPesquisa(){
+      this.nome = '';
+    }
+
+    abrirModal(){
+    this.dialog.open(ModalAdicionarProdutoComponent, {
+      width: '600px',
+      height: '600px',
+      data: {nome: 'we'}
+    });
     }
 
   }

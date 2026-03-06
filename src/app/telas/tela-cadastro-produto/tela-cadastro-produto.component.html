@@ -8,8 +8,8 @@
       <mat-form-field appearance="outline">
         <mat-label>Buscar...</mat-label>
         <input matInput [(ngModel)]="nome" name="nome">
+        <button (click)="limparPesquisa()" mat-icon-button class="limpar-nome"><mat-icon>close</mat-icon></button>
       </mat-form-field>
-
 
       <button mat-raised-button color="primary" (click)="listarPorNome()">
         <mat-icon>search</mat-icon>
@@ -17,7 +17,7 @@
         <mat-icon>chevron_right</mat-icon>
       </button>
 
-      <button mat-raised-button color="primary">
+      <button mat-raised-button color="primary" (click)="abrirModal()">
         <mat-icon>add</mat-icon>
         Novo Produto
         <mat-icon>chevron_right</mat-icon>
