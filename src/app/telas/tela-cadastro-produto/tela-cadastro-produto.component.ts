@@ -4,6 +4,7 @@ import {ServiceService} from '../../Service/service.service';
 import {Filtro, ListaDeProdutos, Page, Produto, ProdutoResposnse} from '../Models/entities.model';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalAdicionarProdutoComponent} from '../modal-adicionar-produto/modal-adicionar-produto.component';
+import {FormBuilder} from '@angular/forms';
 
 
 @Component({
@@ -14,8 +15,6 @@ import {ModalAdicionarProdutoComponent} from '../modal-adicionar-produto/modal-a
 export class TelaCadastroProdutoComponent implements OnInit {
 
 
-
-
   displayedColumns: string[] = ['id', 'nome', 'estoque', 'preco', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Produto>();
   total: number;
@@ -23,12 +22,13 @@ export class TelaCadastroProdutoComponent implements OnInit {
   baixoEstoque: number;
    nome: string;
 
-  constructor(private service: ServiceService, private dialog: MatDialog) { }
+  constructor(private service: ServiceService, private dialog: MatDialog ) { }
 
   ngOnInit(): void {
     this.listarProdutos();
 
   }
+
 
   editar(element) {
     console.log(element);
@@ -82,6 +82,17 @@ export class TelaCadastroProdutoComponent implements OnInit {
       width: '600px',
       height: '600px',
       data: {nome: 'we'}
+    });
+    }
+    deletarProdutoPorId(id: number){
+    this.service.deletarProduto(id).subscribe({
+      next: data => {
+        console.log(data);
+        this.listarProdutos();
+      },
+      error: err => {
+        console.log('Erro', err);
+      }
     });
     }
 

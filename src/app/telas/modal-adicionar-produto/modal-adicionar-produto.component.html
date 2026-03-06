@@ -3,33 +3,33 @@
   <mat-card class="form-card">
     <h2 class="titulo">Cadastro de Produto</h2>
 
-    <form class="form-produto">
+    <form class="form-produto" [formGroup]="formulario" >
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Nome do Produto</mat-label>
-        <input matInput placeholder="Digite o nome do produto">
+        <input matInput placeholder="Digite o nome do produto"  formControlName="nome">
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Preço</mat-label>
-        <input matInput type="number" placeholder="Digite o preço">
+        <input matInput type="number" placeholder="Digite o preço" formControlName="preco">
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Estoque</mat-label>
-        <input matInput type="number" placeholder="Quantidade em estoque">
+        <input matInput type="number" placeholder="Quantidade em estoque" formControlName="estoque">
       </mat-form-field>
 
       <div class="radio-container">
         <mat-label class="radio-title">Status do Produto</mat-label>
 
-        <mat-radio-group class="radio-group">
-          <mat-radio-button value="ativo">Ativo</mat-radio-button>
-          <mat-radio-button value="inativo">Inativo</mat-radio-button>
+        <mat-radio-group class="radio-group" formControlName="statusProduto">
+          <mat-radio-button value="ATIVO">Ativo</mat-radio-button>
+          <mat-radio-button value="INATIVO">Inativo</mat-radio-button>
         </mat-radio-group>
       </div>
 
-      <button mat-raised-button color="primary" class="botao">
+      <button mat-raised-button color="primary" class="botao" (click)="close()">
         Salvar Produto
       </button>
 

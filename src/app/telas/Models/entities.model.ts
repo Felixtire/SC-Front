@@ -40,4 +40,10 @@ export interface ProdutoResposnse{
   preco: number;
   statusProduto: string;
 }
+export interface ProdutoCadastro{
+  nome: string;
+  preco: number;
+  estoque: number;
+  statusProduto: string;
+}
 

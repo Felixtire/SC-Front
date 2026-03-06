@@ -13,7 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModalAdicionarProdutoComponent } from './modal-adicionar-produto/modal-adicionar-produto.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
@@ -44,7 +44,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSortModule,
     FormsModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    ReactiveFormsModule
   ]
 })
 export class TelasModule { }
