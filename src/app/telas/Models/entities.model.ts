@@ -47,3 +47,10 @@ export interface ProdutoCadastro{
   statusProduto: string;
 }
 
+export interface ProdutoEditado{
+  nome: string;
+  preco: number;
+  statusProduto: string;
+  estoque: number;
+}
+

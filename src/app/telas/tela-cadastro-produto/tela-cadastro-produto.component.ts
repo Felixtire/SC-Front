@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {ServiceService} from '../../Service/service.service';
 import {Filtro, ListaDeProdutos, Page, Produto, ProdutoResposnse} from '../Models/entities.model';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalAdicionarProdutoComponent} from '../modal-adicionar-produto/modal-adicionar-produto.component';
 import {FormBuilder} from '@angular/forms';
+import {EditarProdutoModalComponent} from '../editar-produto-modal/editar-produto-modal.component';
 
 
 @Component({
@@ -14,15 +15,14 @@ import {FormBuilder} from '@angular/forms';
 })
 export class TelaCadastroProdutoComponent implements OnInit {
 
-
   displayedColumns: string[] = ['id', 'nome', 'estoque', 'preco', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Produto>();
   total: number;
   emEstoque: number;
   baixoEstoque: number;
    nome: string;
-
   constructor(private service: ServiceService, private dialog: MatDialog ) { }
+
 
   ngOnInit(): void {
     this.listarProdutos();
@@ -93,6 +93,13 @@ export class TelaCadastroProdutoComponent implements OnInit {
       error: err => {
         console.log('Erro', err);
       }
+    });
+    }
+    editarProdutoModal(produto: Produto){
+    this.dialog.open(EditarProdutoModalComponent, {
+      width: '600px',
+      height: '600px',
+      data: produto
     });
     }
 
