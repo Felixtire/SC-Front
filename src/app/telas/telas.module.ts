@@ -15,8 +15,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModalAdicionarProdutoComponent } from './modal-adicionar-produto/modal-adicionar-produto.component';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+import { EditarProdutoModalComponent } from './editar-produto-modal/editar-produto-modal.component';
 
 
 
@@ -25,7 +26,8 @@ import {MatRadioModule} from '@angular/material/radio';
   declarations: [
     TelaCadastroProdutoComponent,
     TelaCadastroPedidoComponent,
-    ModalAdicionarProdutoComponent
+    ModalAdicionarProdutoComponent,
+    EditarProdutoModalComponent
   ],
   imports: [
     CommonModule,

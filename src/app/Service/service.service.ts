@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {Filtro, ListaDeProdutos, Page, Produto, ProdutoCadastro, ProdutoResposnse} from '../telas/Models/entities.model';
+import {Filtro, ListaDeProdutos, Page, Produto, ProdutoCadastro, ProdutoEditado, ProdutoResposnse} from '../telas/Models/entities.model';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -35,6 +35,10 @@ export class ServiceService {
   deletarProduto(id: number): Observable<void>{
     const pathVarId = id;
     return this.http.delete<void>(`${this.apiUrl}produtos/${pathVarId}`);
+  }
+
+  editarProduto(produto: Produto): Observable<Produto> {
+    return this.http.patch<Produto>(`${this.apiUrl}produtos`, produto);
   }
 
 }

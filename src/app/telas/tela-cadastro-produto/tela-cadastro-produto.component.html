@@ -97,7 +97,7 @@
     <ng-container matColumnDef="acoes">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button color="primary" (click)="editar(element)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="editarProdutoModal(element)"><mat-icon>edit</mat-icon></button>
         <button mat-icon-button color="primary" (click)="deletarProdutoPorId(element.id)"><mat-icon>delete</mat-icon></button>
       </td>
 
