@@ -1,4 +1,4 @@
-FROM node:18 AS build
+FROM node:14 AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN npm run build
 
 FROM nginx:alpine
 
-COPY --from=build /app/dist/seu-projeto /usr/share/nginx/html
+COPY --from=build /app/dist/Sc-Controles-de-Estoque-front /usr/share/nginx/html
 
 EXPOSE 80
 
